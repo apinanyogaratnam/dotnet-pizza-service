@@ -4,7 +4,7 @@ build:
 	docker build -t dotnet-service .
 
 run:
-	docker run -p 80:80 dotnet-service
+	docker run -p 5196:5196 dotnet-service
 
 auth:
 	grep -v '^#' .env.local | grep -e "CR_PAT" | sed -e 's/.*=//' | docker login ghcr.io -u USERNAME --password-stdin
