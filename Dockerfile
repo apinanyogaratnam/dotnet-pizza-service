@@ -4,16 +4,15 @@ WORKDIR /source
 
 # copy csproj and restore as distinct layers
 COPY *.sln .
-COPY dotnet-service.csproj .
+COPY *.csproj .
 RUN dotnet restore
 
 # copy everything else and build app
 COPY . .
-WORKDIR /source/dotnet-service
-RUN dotnet publish -c release -o /app --no-restore
+RUN dotnet build
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
-COPY --from=build /app ./
+COPY --from=build / ./
 ENTRYPOINT ["dotnet", "dotnet-service.dll"]
