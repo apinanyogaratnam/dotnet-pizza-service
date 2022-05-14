@@ -10,9 +10,9 @@ auth:
 	grep -v '^#' .env.local | grep -e "CR_PAT" | sed -e 's/.*=//' | docker login ghcr.io -u USERNAME --password-stdin
 
 tag:
-	docker tag dotnet-service ghcr.io/apinanyogaratnam/dotnet-service:${TAG_VERSION}
+	docker tag dotnet-service ghcr.io/apinanyogaratnam/dotnet-pizza-service:${TAG_VERSION}
 	git tag -m "v${TAG_VERSION}" v${TAG_VERSION}
 
 push:
-	docker push ghcr.io/apinanyogaratnam/dotnet-service:${TAG_VERSION}
+	docker push ghcr.io/apinanyogaratnam/dotnet-pizza-service:${TAG_VERSION}
 	git push --tags
