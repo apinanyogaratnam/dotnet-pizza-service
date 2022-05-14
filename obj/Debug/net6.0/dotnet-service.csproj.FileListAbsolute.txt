@@ -24,4 +24,4 @@
 /Users/apinanyogaratnam/Desktop/dotnet-service/obj/Debug/net6.0/dotnet-service.pdb
 /Users/apinanyogaratnam/Desktop/dotnet-service/obj/Debug/net6.0/dotnet-service.genruntimeconfig.cache
 /Users/apinanyogaratnam/Desktop/dotnet-service/obj/Debug/net6.0/ref/dotnet-service.dll
-/Users/apinanyogaratnam/Desktop/dotnet-service/bin/Debug/net6.0/ref/dotnet-service.dll
+/Users/apinanyogaratnam/Desktop/dotnet-service/obj/Debug/net6.0/refint/dotnet-service.dll
